@@ -42,7 +42,7 @@ export default function sketch (p) {
             p.textSize(20);
             //p.fill(0);
             p.text(scrambledTitle.charAt(i), x, y);
-            if (p.frameCount % 10 == 5) {
+            if (p.frameCount % 10 === 5) {
               synth.cancel();
             }
             if (p.frameCount % 20 === 0) {

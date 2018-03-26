@@ -7,7 +7,7 @@ import styles from './styles.module.css';
 function NewsScraperComponent (props) {
   return (
     <div>
-      <P5Wrapper sketch={sketch} newsArticles={props.newsArticles}/>
+      {/* <P5Wrapper sketch={sketch} newsArticles={props.newsArticles}/> */}
       <ul className={styles.articlesList}>
         {
           props.newsArticles.map(article => (
