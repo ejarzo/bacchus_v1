@@ -1,13 +1,16 @@
 import React from 'react';
 import P5Wrapper from 'react-p5-wrapper';
 
-import sketch from './p5sketch';
+import sketch2 from './p5sketch2';
 import styles from './styles.module.css';
 
 function NewsScraperComponent (props) {
   return (
     <div>
-      {/* <P5Wrapper sketch={sketch} newsArticles={props.newsArticles}/> */}
+      <P5Wrapper
+        sketch={sketch2}
+        article={props.newsArticles[props.articleIndex]}
+      />
       <ul className={styles.articlesList}>
         {
           props.newsArticles.map(article => (

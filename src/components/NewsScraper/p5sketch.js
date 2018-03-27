@@ -21,7 +21,8 @@ export default function sketch (p) {
     const g = Math.cos(p.frameCount / 10) * 100;
     const b = Math.tan(p.frameCount / 3) * 100;
 
-    p.background(r, g, b, 40);
+    // p.background(r, g, b, 40);
+    p.background(255);
     p.noStroke();
     if (p.frameCount % 10 === 0) {
       p.fill(b, r, g);
