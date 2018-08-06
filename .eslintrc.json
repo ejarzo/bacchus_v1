@@ -4,6 +4,9 @@
       "es6": true,
       "jasmine": true
   },
+  "globals": {
+      "process": true
+  },
   "extends": ["eslint:recommended", "plugin:react/recommended"],
   "parserOptions": {
       "ecmaFeatures": {
@@ -33,6 +36,7 @@
           "always"
       ],
       "no-console": 1,
+      "no-process-env": "off",
       "prefer-const": "error",
       "space-before-function-paren": ["error", "always"]
   }

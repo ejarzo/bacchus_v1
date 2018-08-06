@@ -28,19 +28,20 @@ class NewsScraperContainer extends React.Component {
   }
 
   getNews () {
+    const apiKey = process.env.REACT_APP_NEWS_API_KEY || window.prompt('NewsAPI key:');
     const url = 'https://newsapi.org/v2/top-headlines/';
     const params = {
       country: 'us',
-      apiKey: newsApiKey,
+      apiKey,
     };
+
     axios.get(url, { params })
       .then(response => {
         const newsArticles = response.data.articles;
         this.setState({ newsArticles });
         newsArticles[0].title.split(' ').forEach(word => {
-          this.getSynonym(word);
+          // this.getSynonym(word);
         });
-        this.getSynonym('test');
       });
   }
 
@@ -60,9 +61,9 @@ class NewsScraperContainer extends React.Component {
   render () {
     return (
       <div>
-        <button onClick={this.incrementArticleIndex}>
+        {/*<button onClick={this.incrementArticleIndex}>
           One More
-        </button>
+        </button>*/}
         <NewsScraperComponent
           newsArticles={this.state.newsArticles}
           articleIndex={this.state.articleIndex}
