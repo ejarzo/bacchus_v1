@@ -2,6 +2,7 @@
   "name": "bacchus_v1",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://ejarzo.github.io/newsscraper",
   "dependencies": {
     "axios": "^0.18.0",
     "react": "^16.2.0",
@@ -15,10 +16,13 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "eslint": "^4.19.1",
-    "eslint-plugin-react": "^7.7.0"
+    "eslint-plugin-react": "^7.7.0",
+    "gh-pages": "^1.2.0"
   }
 }
